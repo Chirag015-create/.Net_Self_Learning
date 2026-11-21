@@ -1,4 +1,4 @@
-```markdown
+Markdown
 # 🎓 Student Course Registration System
 
 <div align="center">
@@ -89,63 +89,50 @@ self_learning/
 ├── Program.cs
 ├── self_learning.csproj
 └── README.md
-
-```
-
-## 📚 How MVC Works in This App
-
+📚 How MVC Works in This App
 This app is organized into three main parts: Model, View, and Controller.
 
-### 1. Model
 
-The `Student.cs` file defines what a student looks like in the code and sets the rules for valid input.
+1. Model
+The Student.cs file defines what a student looks like in the code and sets the rules for valid input.
 
-**Fields:**
+Fields:
 
-* Id
-* Name
-* Email
-* Course
-* Semester
 
-### 2. View
-
+•	Id
+•	Name
+•	Email
+•	Course
+•	Semester
+2. View
 Razor Views are the web pages that users see and interact with.
 
-| View | What It Shows |
-| --- | --- |
-| Home/Index.cshtml | The main welcome page |
-| Student/Create.cshtml | The form to register a new student |
-| Student/Index.cshtml | The table listing all students |
-| Student/Details.cshtml | The full details of one specific student |
+View	What It Shows
+Home/Index.cshtml	The main welcome page
+Student/Create.cshtml	The form to register a new student
+Student/Index.cshtml	The table listing all students
+Student/Details.cshtml	The full details of one specific student
+3. Controller
+The StudentController.cs file handles user actions and decides what happens next.
 
-### 3. Controller
-
-The `StudentController.cs` file handles user actions and decides what happens next.
-
-| Action Method | What It Does |
-| --- | --- |
-| Index() | Shows the list of all registered students |
-| Create() GET | Opens the empty registration form |
-| Create() POST | Checks the form data and saves the new student |
-| Details(int id) | Finds and displays one student's details |
-
-## ✅ Input Validation Rules
-
+Action Method	What It Does
+Index()	Shows the list of all registered students
+Create() GET	Opens the empty registration form
+Create() POST	Checks the form data and saves the new student
+Details(int id)	Finds and displays one student's details
+✅ Input Validation Rules
 The app uses C# Data Annotations to check user input on the server before saving it.
 
-| Rule | What It Checks |
-| --- | --- |
-| `[Required]` | Makes sure the field is not left blank |
-| `[StringLength]` | Limits how many characters can be typed |
-| `[EmailAddress]` | Checks that the text is a real email format |
-| `[Range(1, 8)]` | Ensures the semester is a number between 1 and 8 |
+Rule	What It Checks
+[Required]	Makes sure the field is not left blank
+[StringLength]	Limits how many characters can be typed
+[EmailAddress]	Checks that the text is a real email format
+[Range(1, 8)]	Ensures the semester is a number between 1 and 8
+ModelState.IsValid checks if all these rules pass before adding the student to the list.
 
-`ModelState.IsValid` checks if all these rules pass before adding the student to the list.
 
-## 🔄 How the App Flows
-
-```text
+🔄 How the App Flows
+Plaintext
           🏠 Home Page
                 |
                 ▼
@@ -172,120 +159,97 @@ The app uses C# Data Annotations to check user input on the server before saving
         Form           |
                        ▼
                 View Student Details
-
-```
-
-## 🚀 How to Run This Project
-
+🚀 How to Run This Project
 Follow these steps to run the app on your own computer.
 
-### What You Need First
 
+What You Need First
 Make sure you have installed:
 
-* [.NET 10 SDK](https://dotnet.microsoft.com/download)
-* [Visual Studio](https://visualstudio.microsoft.com/) (with the ASP.NET and web development workload)
-* Git
 
-### Setup Steps
+•	.NET 10 SDK
+•	Visual Studio (with the ASP.NET and web development workload)
+•	Git
+Setup Steps
+Step 1: Download the project
 
-**Step 1: Download the project**
 
-```bash
+Bash
 git clone [https://github.com/meetpithadiya123/.NET_self_learning.git](https://github.com/meetpithadiya123/.NET_self_learning.git)
+Step 2: Open the project folder
 
-```
 
-**Step 2: Open the project folder**
-
-```bash
+Bash
 cd .NET_self_learning
+Step 3: Find the project file
 
-```
+Go into the folder that contains self_learning.csproj.
 
-**Step 3: Find the project file**
+Step 4: Install required packages
 
-Go into the folder that contains `self_learning.csproj`.
 
-**Step 4: Install required packages**
-
-```bash
+Bash
 dotnet restore
+Step 5: Start the app
 
-```
 
-**Step 5: Start the app**
-
-```bash
+Bash
 dotnet run
+Step 6: Open in your browser
 
-```
+Click or copy the https://localhost:... link shown in your terminal to view the app.
 
-**Step 6: Open in your browser**
+(Tip: You can also open the project in Visual Studio and press F5 to run it.)
 
-Click or copy the `https://localhost:...` link shown in your terminal to view the app.
 
-*(Tip: You can also open the project in Visual Studio and press `F5` to run it.)*
-
-## 🌐 App URLs
-
-| Page | Web Address |
-| --- | --- |
-| Home | `/` |
-| Student Registration | `/Student/Create` |
-| Student List | `/Student/Index` |
-| Student Details | `/Student/Details/1` |
-
-## 📸 Screenshots
-
+🌐 App URLs
+Page	Web Address
+Home	/
+Student Registration	/Student/Create
+Student List	/Student/Index
+Student Details	/Student/Details/1
+📸 Screenshots
 Here is how the app looks in action:
 
-### 🏠 Home Page
 
-### 📝 Student Registration Form
+🏠 Home Page
+📝 Student Registration Form
+⚠️ Form Validation
+📋 Student List
+👤 Student Details
+⚠️ Important Note
+This app saves student records in a temporary in-memory List<Student>.
 
-### ⚠️ Form Validation
 
-### 📋 Student List
-
-### 👤 Student Details
-
-## ⚠️ Important Note
-
-This app saves student records in a temporary in-memory `List<Student>`.
-
-* You do not need to set up a database.
-* Saved students stay visible as long as the app is running.
-* All records are cleared once you stop or restart the app.
-
+•	You do not need to set up a database.
+•	Saved students stay visible as long as the app is running.
+•	All records are cleared once you stop or restart the app.
 This setup was chosen because a database was not required for this self-learning activity.
 
-## 🎯 What I Learned
 
+🎯 What I Learned
 Building this project helped me understand:
 
-* The basics of ASP.NET Core MVC.
-* How MVC projects are structured and organized.
-* How to create Models, Controllers, and Razor Views.
-* How URL routing and controller actions work together.
-* Using Razor syntax and Tag Helpers in HTML.
-* Connecting form inputs to C# models (Model Binding).
-* Validating user input with Data Annotations and `ModelState.IsValid`.
-* Managing and sharing code using Git and GitHub.
 
-## 🔮 Future Improvements
-
+•	The basics of ASP.NET Core MVC.
+•	How MVC projects are structured and organized.
+•	How to create Models, Controllers, and Razor Views.
+•	How URL routing and controller actions work together.
+•	Using Razor syntax and Tag Helpers in HTML.
+•	Connecting form inputs to C# models (Model Binding).
+•	Validating user input with Data Annotations and ModelState.IsValid.
+•	Managing and sharing code using Git and GitHub.
+🔮 Future Improvements
 Here are a few ways this project can be upgraded later:
 
-* Connect a real database using SQL Server and Entity Framework Core.
-* Add options to edit or delete existing student records.
-* Add a search bar and filters to find students faster.
-* Add user login and role-based access (Admin/Student).
-* Upgrade the design to look even better on mobile screens.
 
-## 👨‍💻 Author
-
-**Meet Pithadiya**
+•	Connect a real database using SQL Server and Entity Framework Core.
+•	Add options to edit or delete existing student records.
+•	Add a search bar and filters to find students faster.
+•	Add user login and role-based access (Admin/Student).
+•	Upgrade the design to look even better on mobile screens.
+👨‍💻 Author
+Meet Pithadiya
 
 B.Tech Computer Engineering
 
@@ -295,12 +259,10 @@ Marwadi University
 
 📚 Semester: 5
 
-🔗 **GitHub Repository:**
+🔗 GitHub Repository:
 
-[.NET Self Learning – Student Course Registration System](https://github.com/meetpithadiya123/.NET_self_learning)
+.NET Self Learning – Student Course Registration System
 
----
 
-### ⭐ Thank You for Visiting!
-
-**Built with ❤️ using ASP.NET Core MVC and C#**
+⭐ Thank You for Visiting!
+Built with ❤️ using ASP.NET Core MVC and C#
